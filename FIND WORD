@@ -1,4 +1,5 @@
 #include <iostrean>
+#include <vector>
 #include <cstring>
 
 using namespace std;
@@ -27,3 +28,19 @@ char findWord[23][23] = {
 	{'L','B','V','K','K','W','A','N','Z','A','A','Q','I','N','W','O','L','P','W','O','N','S','L'}
 	{'B','F','R','E','E','Z','I','N','G','R','A','I','N','S','L','I','L','G','T','M','E','L','T'}
   	{'H','Q','P','Y','L','W','H','F','M','N','F','F','U','F','P','S','W','X','N','U','M','M','V'}
+};
+bool searchWord(const string& word) {
+    int len = word.length(); 
+    for (int i = 0; i < 23; ++i) {
+        for (int j = 0; j < 23; ++j) {
+
+            if ( j + len <= 23) {
+                bool found = true;
+                for (int k = 0; k < len; ++k) {
+                    if (findWord[i][j + k] != word[k]) {
+                        found = false;
+                        break;
+                    }
+                }
+                if (found) return true;
+            }
