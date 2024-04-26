@@ -1,0 +1,6 @@
+#include <iostrean>
+#include <cstring>
+
+using namespace std;
+
+char findWord[23][23] = {
