@@ -93,3 +93,9 @@ bool searchWord(const string& word) {
             }
                return false;
         }
+
+int main() {
+    cout << "Input: " << endl;
+    int jumlah;
+    cin >> jumlah;
+    vector<string> hasil;
