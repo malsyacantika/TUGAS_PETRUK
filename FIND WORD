@@ -98,3 +98,7 @@ for (int i = 0; i < jumlah; ++i) {
             hasil.push_back("Tidak Ada");
         }
     }
+cout<<endl<<"Output:"<<endl;
+int jumlah;
+cin>>jumlah;
+vector<string> hasil;
