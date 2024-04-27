@@ -102,3 +102,4 @@ cout<<endl<<"Output:"<<endl;
 int jumlah;
 cin>>jumlah;
 vector<string> hasil;
+}
