@@ -99,3 +99,13 @@ int main() {
     int jumlah;
     cin >> jumlah;
     vector<string> hasil;
+    
+for (int i = 0; i < jumlah; ++i) {
+        string kata;
+        cin >> kata;
+        if (searchWord(kata)) {
+            hasil.push_back("Ada");
+        } else {
+            hasil.push_back("Tidak Ada");
+        }
+    }
