@@ -1,4 +1,4 @@
-#include <iostrean>
+#include <iostream>
 #include <vector>
 #include <cstring>
 
@@ -55,26 +55,26 @@ bool searchWord(const string& word) {
                 if (found) return true;
             }
 
-            if (i + len <= 23 && j + len <= 23) {
-                bool found = false;
+           if (i + len <= 23) {
+                bool found = true;
                 for (int k = 0; k < len; ++k) {
-                    if (findWord[j + k][i + k] != word[k]) {
-                        found = true;
+                    if (findWord[i + k][j] != word[k]) {
+                        found = false;
                         break;
                     }
                 }
-                if (found) return false;
+                if (found) return true;
             }
-                if (i + len <= 23 && j - len + 1 >=0){
-                    bool found = true;
-                    for(int k = 0;k < len; ++k){
-                      if (findWord[i +k][j-k]!=word[k]){
-                          found = false;
-                          break;
-                        }
-                      }
-                      if (found) return true;
+
+            if (i + len <= 23 && j + len <= 23) {
+                bool found = true;
+                for (int k = 0; k < len; ++k) {
+                    if (findWord[i + k][j + k] != word[k]) {
+                        found = false;
+                        break;
                     }
+                }
+                if (found) return true;
                 }
             }
                return false;
