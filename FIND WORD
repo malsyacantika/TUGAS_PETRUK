@@ -44,3 +44,24 @@ bool searchWord(const string& word) {
                 }
                 if (found) return true;
             }
+            if (i + len <= 25) {
+                bool found = true;
+                for (int k = 0; k < len; ++k) {
+                    if (findWord[i + k][j] != word[k]) {
+                        found = false;
+                        break;
+                    }
+                }
+                if (found) return true;
+            }
+
+            if (i + len <= 25 && j + len <= 25) {
+                bool found = false;
+                for (int k = 0; k < len; ++k) {
+                    if (findWord[i + k][j + k] != word[k]) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) return false;
+            }
