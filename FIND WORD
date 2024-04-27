@@ -79,7 +79,7 @@ bool searchWord(const string& word) {
             }
                return false;
         }
-if (i - len + 1 >= 0 && j + len <=0){
+if (i - len + 1 >= 0 && j + len <=23){
 bool found = true;
 for (int k = 0;k < len; ++ k){
 if (findWord[i + k][j+k]1= word[k]){
