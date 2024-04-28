@@ -99,7 +99,8 @@ for (int i = 0; i < jumlah; ++i) {
         }
     }
 cout<<endl<<"Output:"<<endl;
-int jumlah;
-cin>>jumlah;
-vector<string> hasil;
+for (const string & s : hasil){
+cout << s << endl;
+}
+return 0;
 }
