@@ -30,6 +30,7 @@ char findWord[23][23] = {
 	{'B','F','R','E','E','Z','I','N','G','R','A','I','N','S','L','I','L','G','T','M','E','L','T'},
   	{'H','Q','P','Y','L','W','H','F','M','N','F','F','U','F','P','S','W','X','N','U','M','M','V'}
 };
+
 bool searchWord(const string& word) {
     int len = word.length(); 
     for (int i = 0; i < 23; ++i) {
